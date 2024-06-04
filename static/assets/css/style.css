@@ -68,7 +68,41 @@ h6 {
   visibility: visible;
   opacity: 1;
 }
+/*--------------------------------------------------------------
+# Scroll Down button
+--------------------------------------------------------------*/
+.from-top {
+  position: fixed;
+  visibility: hidden;
+  opacity: 0;
+  right: 15px;
+  bottom: 15px;
+  z-index: 996;
+  background: #ffc451;
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  transition: all 0.4s;
+}
 
+.from-top i {
+  font-size: 28px;
+  color: #151515;
+  line-height: 0;
+}
+
+.from-top:hover {
+  background: #151515;
+}
+
+.from-top:hover i {
+  color: #ffc451;
+}
+
+.from-top.active {
+  visibility: visible;
+  opacity: 1;
+}
 /*--------------------------------------------------------------
 # Preloader
 --------------------------------------------------------------*/
@@ -150,6 +184,12 @@ h6 {
 
 #header .logo img {
   max-height: 40px;
+}
+
+.png {
+max-width: 100%;
+height: auto;
+border-radius: 1%;
 }
 
 /*--------------------------------------------------------------
@@ -406,10 +446,31 @@ h6 {
 #hero {
   width: 100%;
   min-height: 100vh;
-  background: url("../img/hero-bg.jpg") top center;
   background-size: cover;
   position: relative;
 }
+
+@media (max-width: 750px) {
+   #background-video {
+      display: none;
+   }
+   #hero {
+      background: url("../img/hero-bg.jpg") top center;
+      background-size: cover;
+      width: 100%;
+      min-height: 100vh;
+      background-size: cover;
+      position: relative;
+
+   }
+}
+
+#background-video {
+    z-index:-1;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    object-fit: cover;}
 
 #hero:before {
   content: "";
@@ -509,7 +570,7 @@ section {
 }
 
 .section-title {
-  padding-bottom: 40px;
+  padding-bottom: 10px;
 }
 
 .section-title h2 {
@@ -534,13 +595,21 @@ section {
 }
 
 .section-title p {
-  margin: 0;
-  margin: 0;
+  margin-top: 5%;
   font-size: 36px;
   font-weight: 700;
   text-transform: uppercase;
   font-family: "Poppins", sans-serif;
   color: #151515;
+}
+
+.blog-1 {
+    height: 400px;
+    width:auto;
+    }
+
+.socials {
+margin: 5%;
 }
 
 /*--------------------------------------------------------------

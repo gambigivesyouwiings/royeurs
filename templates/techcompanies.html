@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Tech</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="static/assets/img/yacht/logo final.jpeg" rel="icon">
+  <link href="static/assets/img/yacht/logo final.jpeg" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="static/assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="static/assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="static/assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="static/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="static/assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Gp
+  * Template URL: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/
+  * Updated: Mar 17 2024 with Bootstrap v5.3.3
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+</head>
+
+<body>
+
+ <!-- ======= Header ======= -->
+  <header id="header" class="fixed-top header-inner-pages">
+    <div class="container d-flex align-items-center justify-content-lg-between">
+
+      <!-- Uncomment below if you prefer to use an image logo -->
+       <a href="{{url_for('hero')}}" class="logo me-auto me-lg-0"><img src="static/assets/img/yacht/logo final.jpeg" alt="" class="png img-fluid"></a>
+
+      <nav id="navbar" class="navbar order-last order-lg-0">
+        <ul>
+         <li><a class="nav-link scrollto" href="{{url_for('hero')}}">Home</a></li>
+          <li><a class="nav-link scrollto" href="{{url_for('about')}}">About</a></li>
+          <li><a class="nav-link scrollto active" href="{{url_for('expertise')}}">Expertise</a></li>
+          <li><a class="nav-link scrollto" href="{{url_for('pricing')}}">Pricing</a></li>
+          <li><a class="nav-link scrollto" href="{{url_for('blog')}}">Blog</a></li>
+          <li><a class="nav-link scrollto" href="{{url_for('contact')}}">Contact</a></li>
+        </ul>
+        <i class="bi bi-list mobile-nav-toggle"></i>
+      </nav><!-- .navbar -->
+
+
+    </div>
+  </header><!-- End Header -->
+
+  <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section class="breadcrumbs">
+      <div class="container">
+
+        <div class="d-flex justify-content-between align-items-center">
+          <h2>Tech</h2>
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Tech</li>
+          </ol>
+        </div>
+
+      </div>
+    </section><!-- End Breadcrumbs -->
+
+    <section class="inner-page">
+      <div class="container" data-aos="fade-up">
+        <p>
+          Perhaps our most experienced category thus far. We generate high piece articles about tech companies' purpose, vision as well as products. The articles also include an image of the logo and HQ, as well as an infobox displaying all relevant information. We also work to update the article to be up-to-date to ensure their clients or investors never miss anything about them. If the article is also tagged as "too promotional" or "edited for undisclosed payments" we also edit the article thoroughly until the issues raised by the banners are addressed and are ultimately removed.
+        </p>
+      </div>
+      <div class="container" data-aos="fade-up">
+       <p>
+          We work with the best sources to ensure your company is shown in the appropriate light and no malicious or inaccurate information is present within the article. We know the importance of Wikipedia to tech companies especially now in the wake of AI where sources like Wikipedia are used for AI modelling and training. it is our duty to ensure your article is suitable for you and client base, and most importantly encyclopedic as our core mission is to help build the online encyclopedia for everyone.
+       </p>
+        </div>
+    </section>
+
+  </main><!-- End #main -->
+
+ <!-- ======= Cta Section ======= -->
+    <section id="cta" class="cta">
+      <div class="container" data-aos="zoom-in">
+
+        <div class="text-center">
+          <h3>Start your Wikipedia journey with us today</h3>
+          <p> We ensure your article is up to the highest standard and is presented professionally and in an encyclopedic manner. We are ready to walk every step with you to your satisfaction.</p>
+          <a class="cta-btn" href="{{url_for('contact')}}">Contact Us</a>
+        </div>
+
+      </div>
+    </section><!-- End Cta Section -->
+
+  <!-- ======= Footer ======= -->
+  <footer id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
+
+          <div class="col-lg-3 col-md-6">
+            <div class="footer-info">
+              <h3>Lettoir<span>.</span></h3>
+              <p>
+                <strong>Email:</strong> info@lettoir.com<br>
+              </p>
+              <div class="social-links mt-3">
+                <a href="https://linkedin.com/company/lettoir/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+            <h4>Useful Links</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{url_for('hero')}}">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{url_for('about')}}">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{url_for('pricing')}}">Pricing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{url_for('expertise')}}">Expertise</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="{{url_for('blog')}}">Blog</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Our Services</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Article Creation</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Article Editing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Draft Publishing</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Adding Images</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Tag Removal</a></li>
+            </ul>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Our Newsletter</h4>
+            <p>Subscribe to our newsletter to never miss an update from us.</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        &copy; Copyright <strong><span>Lettoir</span></strong>. All Rights Reserved
+      </div>
+      <div class="credits">
+        <!-- All the links in the footer should remain intact. -->
+        <!-- You can delete the links only if you purchased the pro version. -->
+        <!-- Licensing information: https://bootstrapmade.com/license/ -->
+        <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/gp-free-multipurpose-html-bootstrap-template/ -->
+      </div>
+    </div>
+  </footer><!-- End Footer -->
+
+  <div id="preloader"></div>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="static/assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="static/assets/vendor/aos/aos.js"></script>
+  <script src="static/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="static/assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="static/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="static/assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="static/assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="static/assets/js/main.js"></script>
+
+</body>
+
+</html>

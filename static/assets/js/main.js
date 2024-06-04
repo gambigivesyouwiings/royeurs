@@ -107,6 +107,18 @@
     window.addEventListener('load', toggleBacktotop)
     onscroll(document, toggleBacktotop)
   }
+  let fromtop = select('.from-top')
+  if (fromtop) {
+    const toggleFromtop = () => {
+      if (window.scrollY < 100) {
+        fromtop.classList.add('active')
+      } else {
+        fromtop.classList.remove('active')
+      }
+    }
+    window.addEventListener('load', toggleFromtop)
+    onscroll(document, toggleFromtop)
+  }
 
   /**
    * Mobile nav toggle
