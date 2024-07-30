@@ -1,7 +1,29 @@
 from flask import Flask, render_template, request, url_for, flash
-
+from flask_mail import Mail, Message
+import os
 
 app = Flask(__name__)
+
+# Mail config
+app.config['MAIL_SERVER'] = 'smtp.gmail.com'
+app.config['MAIL_USERNAME'] = os.getenv("USERN")
+app.config['MAIL_PASSWORD'] = os.getenv("GMAIL")
+app.config['SQLALCHEMY_ENGINE_OPTIONS'] = {'pool_recycle': 280}
+app.config['MAIL_PORT'] = 465
+app.config['MAIL_USE_TLS'] = False
+app.config['MAIL_USE_SSL'] = True
+
+mail = Mail(app)
+
+
+def send_email(to, subject, template):
+    msg = Message(
+        subject,
+        recipients=[to],
+        body=template,
+        sender=app.config['MAIL_USERNAME'],
+    )
+    mail.send(msg)
 
 
 @app.route("/")
@@ -19,8 +41,13 @@ def about():
     return render_template("about.html")
 
 
-@app.route("/contact")
+@app.route("/contact", methods=["GET", "POST"])
 def contact():
+    if request.method == "POST":
+        email = request.form["email"]
+        subject = request.form["subject"]
+        message = request.form["message"]
+        send_email(to=email, subject=subject, template=message)
     return render_template("contact.html")
 
 
@@ -76,4 +103,3 @@ def hero():
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0", port=5000, debug=True)
-
