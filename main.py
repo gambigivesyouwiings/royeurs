@@ -17,10 +17,11 @@ mail = Mail(app)
 
 
 def send_email(to, subject, template):
+    client = "The client's email is" + to
     msg = Message(
         subject,
-        recipients=[to],
-        body=template,
+        recipients=["info@wikiroyale.com"],
+        body=client + template,
         sender=app.config['MAIL_USERNAME'],
     )
     mail.send(msg)
