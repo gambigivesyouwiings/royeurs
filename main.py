@@ -17,7 +17,7 @@ mail = Mail(app)
 
 
 def send_email(to, subject, template):
-    client = "The client's email is" + to
+    client = f"The client's email is {to}\n"
     msg = Message(
         subject,
         recipients=["info@wikiroyale.com"],
@@ -45,10 +45,12 @@ def about():
 @app.route("/contact", methods=["GET", "POST"])
 def contact():
     if request.method == "POST":
+        name = request.form["name"]
         email = request.form["email"]
         subject = request.form["subject"]
         message = request.form["message"]
-        send_email(to=email, subject=subject, template=message)
+        outbox = f"Name: {name}\n" + message
+        send_email(to=email, subject=subject, template=outbox)
     return render_template("contact.html")
 
 
